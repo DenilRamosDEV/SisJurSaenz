@@ -1,24 +1,20 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login</title>
-    <link href="css/usereleccion.css" rel="stylesheet">
+    <title>SAENZ</title>
+    <link rel="stylesheet" href="./css/usereleccion.css">
 </head>
 
 <body background="img/im1.jpg">
-    <!-- <script>
-        var a=0;
-        if (a>0) {
-            alert("error de inicion de seccion");
-            a+=1;
-        }else{
-            // a+=1;
-        }
-    </script> -->
-    <h1>INICIAR SESION COMO:</h1>
+    <header>
+        <h1><img src="./img/logo-Saenz.jpeg" alt=""></h1>
+        <p>ESTUDIO JURÍDICO SAENZ</p>
+    </header>
+    <h3>INICIAR SESION COMO:</h3>
     <div class="login-box">
         <form method="get" action="login.php">
             <div class="user-box">
