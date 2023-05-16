@@ -22,12 +22,12 @@ if (!empty($_POST["ingreso"])) {
         // header("Location: ../view/inicioGerente.php");
         if ($tipousuario == "gerente") {
             session_start();
-            header("Location: ../view/inicioGerente.php");
+            header("Location: ../view/menuGerente.php");
 
         } else if ($tipousuario == "administrador") {
             // Redirigir al usuario a la página de inicio
             session_start();
-            header("Location: ../view/inicioAdministrador.php");
+            header("Location: ../view/menuAdministrador.php");
         }
         
     } else {

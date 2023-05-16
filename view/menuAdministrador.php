@@ -16,7 +16,7 @@
             <img src="./img/logo-Saenz.jpeg" alt="">
             <h1>ESTUDIO JURIDICO SAENZ</h1>
             <ul>
-                <li><?php echo "Gerente:Hugo" ?></li>
+                <li><?php echo "Administrador:Nicolay" ?></li>
                 <li><a href="./usereleccion.php">Cerrar Seccion</a></li>
             </ul>
         </div>
@@ -40,12 +40,16 @@
             </div>
             <div class="continer-caja">
                 <div class="caja">
-                    <p>Gestionar Usuario</p>
-                    <img src="./img/user-icon.png" alt="">
+                    <p>Gestionar Agendas</p>
+                    <img src="./img/agend-icon.png" alt="">
                 </div>
                 <div class="caja">
-                    <p>Gestionar Reportes</p>
-                    <img src="./img/report-icon.png" alt="">
+                    <p>Gestionar Cantidad de Caso</p>
+                    <img src="./img/case-icon.png" alt="">
+                </div>
+                <div class="caja">
+                    <p>Gestionar Precios</p>
+                    <img src="./img/prescios-icon.png" alt="">
                 </div>
                 <div class="caja">
                     <p>Gestionar Expedientes</p>

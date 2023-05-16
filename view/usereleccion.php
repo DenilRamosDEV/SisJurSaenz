@@ -5,33 +5,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SAENZ</title>
-    <link rel="stylesheet" href="./css/usereleccion.css">
+    <title>Menu Gerente</title>
+
+    <link rel="stylesheet" href="./css/menu.css">
 </head>
 
-<body background="img/im1.jpg">
+<body>
     <header>
-        <p>ESTUDIO JURÍDICO SAENZ</p>
+        <div class="continer-header">
+            <img src="./img/logo-Saenz.jpeg" alt="">
+            <h1>ESTUDIO JURIDICO SAENZ</h1>
+            <img src="./img/csdjdh.png" alt="">
+        </div>
     </header>
-    <h3>INICIAR SESION COMO:</h3>
-    <div class="login-box">
-        <form method="get" action="login.php">
-            <div class="user-box">
-                <h1>GERENTE</h1>
+
+    <main>
+        <div class="continer-main">
+            <div class="continer-login">
+                <div class="login">
+                    <form method="get" action="login.php">
+                        <div class="user-box">
+                            <h1>GERENTE</h1>
+                        </div>
+                        <img src="./img/gerente-icon.png">
+                        <a class="buton" href="login.php?user_type=gerente">INGRESAR</a>
+                    </form>
+                </div>
+                <div class="login">
+                    <form method="get" action="login.php">
+                        <div class="user-box">
+                            <h1>ADMINISTRADOR</h1>
+                        </div>
+                        <img src="./img/admin-icon.png">
+                        <a class="buton" href="login.php?user_type=administrador">INGRESAR</a>
+                    </form>
+                </div>
             </div>
-            <img src="img/gerente.jpg" style="width: 100px; height: 100px;">
-            <a class="buton" href="login.php?user_type=gerente">INGRESAR</a>
-        </form>
-    </div>
-    <div class="login-box2">
-        <form method="get" action="login.php">
-            <div class="user-box">
-                <h1>ADMINISTRADOR</h1>
-            </div>
-            <img src="img/secre.jpg" style="width: 100px; height: 100px;">
-            <a class="buton" href="login.php?user_type=administrador">INGRESAR</a>
-        </form>
-    </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="copyright">
+            <p>&copy Copyright 2023</p>
+        </div>
+    </footer>
 </body>
 
 </html>

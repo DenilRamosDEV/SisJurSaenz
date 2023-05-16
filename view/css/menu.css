@@ -17,6 +17,7 @@
     width: 120px;
     border-radius: 50%;
     margin-left: 50px;
+    margin-right: 50px;
 }
 .continer-header h1{
     margin-top: 54px;
@@ -38,11 +39,105 @@
     text-decoration: none;
 }
 
+
+
 /* main */
+
+    /* menu */
 .continer-main{
     background-color: #95d5b2;
-    padding: 50px;
+    height: 85vh;
 }
+.continer-caja{
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.caja{
+    background-color: #e9edc9;
+    width: 300px;
+    height: 290px;
+    margin: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+.caja img{
+    width: 250px;
+    padding: 10px 0;
+}
+.caja:hover{
+    background-color: #ffe8d6;
+    cursor: pointer;
+}
+.continer-notificacion{
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px 50px 0 0;
+}
+.continer-notificacion img{
+    display: block;
+    width: 70px;
+    margin: 5px auto;
+}
+.notificacion{
+    padding: 5px 10px;
+    margin-left: 30px;
+    border-radius: 10px;
+    background-color: #e9edc9;
+}
+.notificacion:hover{
+    background-color: #ffe8d6;
+    cursor: pointer;
+}
+
+    /* menu inicio */
+.continer-login{
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+.login{
+    text-align: center;
+    width: 380px;
+    height: 480px;
+    margin: auto 0;
+    background-color:#e9edc9;
+    border-radius: 10px;
+}
+.login:hover{
+    width: 400px;
+    height: 500px;
+    background-color: #ffe8d6;
+    font-size: 1.2em;
+    transition: 400ms;
+    box-shadow: 0 0 0 5px #2d6a4f;
+}
+.login img{
+    width: 300px;
+    margin: 20px auto;
+}
+.login a{
+    text-decoration: none;
+    background-color: #52b788;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+.login a:hover{
+    background-color: #e9edc9;
+    border: 2px solid #000;
+    transition: 400ms;
+}
+.login :hover img{
+    width: 370px;
+    transition: 400ms;
+    /* margin: 10px auto; */
+}
+
+
+
+
 /* footer */
 .copyright{
     height: 120px;
@@ -53,6 +148,6 @@
 }
 .copyright p{
     font-size: 1.5em;
-    padding: 55px;
+    padding: 55px 55px 0 55px;
     font-weight: bolder;
 }
