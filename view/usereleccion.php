@@ -11,7 +11,6 @@
 
 <body background="img/im1.jpg">
     <header>
-        <h1><img src="./img/logo-Saenz.jpeg" alt=""></h1>
         <p>ESTUDIO JURÍDICO SAENZ</p>
     </header>
     <h3>INICIAR SESION COMO:</h3>
