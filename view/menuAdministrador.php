@@ -8,6 +8,12 @@
     <title>Menu Gerente</title>
 
     <link rel="stylesheet" href="./css/menu.css">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <!-- FullCalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.7/index.global.min.js"></script>
 </head>
 
 <body>
@@ -15,8 +21,13 @@
         <div class="continer-header">
             <img src="./img/logo-Saenz.jpeg" alt="">
             <h1>ESTUDIO JURIDICO SAENZ</h1>
+            <?php
+                    if (isset($_GET['usuario'])) {
+                        $user = $_GET['usuario'];
+                    }
+                ?>
             <ul>
-                <li><?php echo "Administrador:Nicolay" ?></li>
+                <li><?php echo "Administrador: ".ucfirst($user);?></li>
                 <li><a href="./usereleccion.php">Cerrar Seccion</a></li>
             </ul>
         </div>
@@ -26,27 +37,34 @@
         <div class="continer-main">
             <div class="continer-notificacion">
                 <div class="notificacion">
-                    <img src="./img/notificscion.png" alt="">
-                    <p>
-                        Proxima cita y audiencias
-                    </p>
+                    <?php
+                        include "../controller/notifi_agenda.php";
+                        $objnoti = new notifi_agenda();
+                    ?>
+                    <br>
+                    
                 </div>
-                <div class="notificacion">
+                <a href="#"> 
+                    <div class="notificacion cta">
                     <img src="./img/calendar.jpg" alt="">
-                    <p>
+                        <p>
                         Calendario
-                    </p>
-                </div>    
+                        </p>
+                    </div> 
+                </a>      
             </div>
             <div class="continer-caja">
+                
                 <div class="caja">
                     <p>Gestionar Agendas</p>
                     <img src="./img/agend-icon.png" alt="">
                 </div>
-                <div class="caja">
-                    <p>Gestionar Cantidad de Caso</p>
-                    <img src="./img/case-icon.png" alt="">
-                </div>
+                <a href="./funciones_administrador/gestion_casos.php?user=<?php echo $user?> ">
+                    <div class="caja">
+                        <p>Gestionar Cantidad de Caso</p>
+                        <img src="./img/case-icon.png" alt="">
+                    </div>
+                </a>
                 <div class="caja">
                     <p>Gestionar Precios</p>
                     <img src="./img/prescios-icon.png" alt="">
@@ -57,6 +75,34 @@
                 </div>
             </div>
         </div>
+        <!-- calendar -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                    locale: "es",
+                    headerToolbar: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'dayGridMonth,timeGridWeek,timeGridDay'
+                    },
+                    dateClick: function(info) {
+                        alert('Date: ' + info.dateStr);
+                        alert('Resource ID: ' + info.resource.id);
+                    }
+                });
+                calendar.render();
+            });
+        </script>
+        <div class="modal-container">
+            <div class="container modal-close">
+                <p class="cerrar">X</p>
+                <div class="col-md-8 offset-md-2">
+                    <div id='calendar'></div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -64,6 +110,14 @@
             <p>&copy Copyright 2023</p>
         </div>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="./javascript/menuGerente.js"></script>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>

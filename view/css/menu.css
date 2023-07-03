@@ -46,7 +46,8 @@
     /* menu */
 .continer-main{
     background-color: #95d5b2;
-    height: 85vh;
+    height: 100vh;
+    padding: 20px;
 }
 .continer-caja{
     padding: 50px;
@@ -73,7 +74,7 @@
 .continer-notificacion{
     display: flex;
     justify-content: flex-end;
-    padding: 50px 50px 0 0;
+    padding: 20px 20px 0 0;
 }
 .continer-notificacion img{
     display: block;
@@ -85,16 +86,91 @@
     margin-left: 30px;
     border-radius: 10px;
     background-color: #e9edc9;
-}
+    text-align: center;
+} 
+    
+#tabla-noti {
+    border-collapse: collapse;
+    width: 10%;
+  }
+  
+  #tabla-noti th, #tabla-noti td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  #tabla-noti th {
+    background-color: #f2f2f2;
+  }
+  
+  #tabla-noti td {
+    background-color: #ffffff;
+  }
+.notificacion p{
+    font-weight: bold;
+  }
 .notificacion:hover{
     background-color: #ffe8d6;
     cursor: pointer;
+}
+    /* calendario */
+.modal-container{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-container .container{
+    width: 70%;
+    height: 90%;
+    background-color: #bdbdbd;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 1s;
+    transform: translateY(0%);
+}
+.modal-container .modal-close{
+    transform: translateY(-200%);
+}
+.cerrar{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #c15757;
+    color: #ccc;
+    line-height: 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+.cerrar:hover{
+    background: #cc2626;
+    color: #fff;
+    border: 1px solid #000;
+}
+/* editando tabla */
+.fc-daygrid-day-frame:hover{
+    background-color: #dfdddd;
 }
 
     /* menu inicio */
 .continer-login{
     width: 100%;
     height: 85vh;
+    /* margin: ; */
     display: flex;
     justify-content: space-evenly;
 }
@@ -105,12 +181,14 @@
     margin: auto 0;
     background-color:#e9edc9;
     border-radius: 10px;
+    display: flex;
+    flex-direction: row;
 }
 .login:hover{
-    width: 400px;
-    height: 500px;
+    width: 390px;
+    height: 490px;
     background-color: #ffe8d6;
-    font-size: 1.2em;
+    font-size: 1.1em;
     transition: 400ms;
     box-shadow: 0 0 0 5px #2d6a4f;
 }
@@ -130,7 +208,7 @@
     transition: 400ms;
 }
 .login :hover img{
-    width: 370px;
+    width: 310px;
     transition: 400ms;
     /* margin: 10px auto; */
 }

@@ -1,38 +1,47 @@
 <?php
-
 if (!empty($_POST["ingreso"])) {
     $usuario = $_POST["user"];
     $contra = $_POST["clave"];
     $tipousuario = $_POST["user_type"];
-    echo "valor 1" . $usuario;
+    /*echo "valor 1" . $usuario;
     echo "valor 2" . $contra;
     echo "valor 3" . $tipousuario;
-
-    $stmt = $mbd->prepare("SELECT * FROM usuario WHERE nombre = :usuario AND contrasena = :contra AND tipo_usuario = :tipousuario");
-    $stmt->bindParam(':usuario', $usuario);
-    $stmt->bindParam(':contra', $contra);
-    $stmt->bindParam('tipousuario', $tipousuario);
+    */
+    require_once '../model/conexion.php'; // Incluir el archivo de conexión
+    
+    $objConexion = new conexionn(); // Crear una instancia de la clase "conexionn"
+    $conexion = $objConexion->conectar(); // Llamar al método "conectar" para establecer la conexión
+    
+    $stmt = $conexion->prepare("SELECT * FROM usuario WHERE nombre = ? AND contrasena = ? AND tipo_usuario = ?");
+    
+    // Vincular parámetros a la consulta
+    $stmt->bind_param("sss", $usuario, $contra, $tipousuario);
+    
     // Ejecutar la consulta
     $stmt->execute();
+    
+    // Obtener el resultado de la consulta
+    $resultado = $stmt->get_result();
+    
     // Obtener el número de filas
-    $num = $stmt->rowCount();
+    $num = $resultado->num_rows;
+    $conexion->close();
     if ($num > 0) {
         // Iniciar sesión
-        // session_start();        
-        // header("Location: ../view/inicioGerente.php");
+        // session_start();
+        
+        // Redirigir al usuario según el tipo de usuario
         if ($tipousuario == "gerente") {
             session_start();
-            header("Location: ../view/menuGerente.php");
-
+            header("Location: ../view/menuGerente.php?usuario=$usuario");
         } else if ($tipousuario == "administrador") {
-            // Redirigir al usuario a la página de inicio
             session_start();
-            header("Location: ../view/menuAdministrador.php");
+            header("Location: ../view/menuAdministrador.php?usuario=". urlencode($usuario));
         }
-        
     } else {
-        echo "<scrpt>console.log('error de inicion de seccion');</scrpt>";
-        //devolver al loging
+        echo "<script>console.log('error de inicio de sesión');</script>";
+        // Devolver al login
         header("location: ../view/usereleccion.php");
     }
 }
+?>

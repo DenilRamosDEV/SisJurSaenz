@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,100;1,200&display=swap');
+
+
+/* Header */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.continer-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #2d6a4f;
+    padding: 10px;
+}
+.continer-header img{
+    width: 120px;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.continer-header h1{
+    margin-top: 54px;
+    font-size: 2em;
+    color: #f18701;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.continer-header ul{
+    margin-top: 54px;
+    margin-right: 50px;
+}
+.continer-header li{
+    display: inline;
+    background-color: #52b788;
+    margin: 10px;
+    padding: 10px;
+}
+.continer-header a{
+    text-decoration: none;
+}
+/*todo el main*/
+.caja-todo{
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/*div buscar cliente*/
+.container-buscar{
+    width: 70%;
+    height: auto;
+    
+    
+}
+
+
+#form-busqueda {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  
+}
+
+#form-busqueda label {
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
+}
+
+#form-busqueda input[type="number"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+  margin-bottom: 10px;
+  margin-right: 10px
+}
+
+#form-busqueda input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#form-busqueda input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/*tabla de busqueda*/
+#tabla-buscar-client {
+
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#tabla-buscar-client th,
+#tabla-buscar-client td {
+  padding: 8px;
+  text-align: center;
+}
+
+#tabla-buscar-client th {
+  background-color: #333;
+  color: white;
+  font-family:unset;
+  font-size: 18px;
+}
+
+#tabla-buscar-client tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#tabla-buscar-client tr:hover {
+  background-color: #ddd;
+}
+
+#tabla-buscar-client td {
+  border-bottom: 1px solid #ddd;
+  font-size: 16px;
+}
+
+#tabla-buscar-client td:first-child {
+  border-left: 1px solid #ddd;
+}
+
+#tabla-buscar-client td:last-child {
+  border-right: 1px solid #ddd;
+}
+/*eliminar y editar*/
+.opcciones-cliente{
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+.div-edit{
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  width: 45%;
+  box-shadow: 15px 5px 10px #00000086;
+  padding: 20px;
+}
+.opcion-editar{
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.opcion-editar h4{
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.opcion-editar input[type="submit"] {
+  
+  padding: 10px 20px;
+  margin-top: 5px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer; 
+}
+.opcion-editar label {
+  padding: 3px;
+  font-weight: bold;
+}
+.div-elim{
+  border-radius: 20px;
+  background-color: #f5f5f5;
+  width: 45%;
+  box-shadow: 15px 5px 10px #00000086;
+  padding: 20px;
+}
+.eliminar-client{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.eliminar-client h4{
+ justify-content: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.eliminar-client label {
+  font-weight: bold;
+  padding: 3px;
+}
+.eliminar-client input[type="submit"] {
+  
+  padding: 10px 20px;
+  margin-top: 5px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer; 
+}
+
+/* Estilos adicionales para el formulario de agregar cliente */
+.container-registrar {
+  width: 30%;  
+  display: flex;  
+  justify-content: center;
+}
+
+#form-agregar-client {
+  padding: 20px;
+  width: 80%;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  box-shadow: 15px 5px 10px #00000086;
+}
+
+#form-agregar-client h3 {
+  justify-content: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+#form-agregar-client label {
+  font-weight: bold;
+}
+
+#form-agregar-client input[type="text"],
+#form-agregar-client input[type="number"],
+#form-agregar-client select,
+#form-agregar-client input[type="email"] {
+  height: 25px;
+  margin-bottom: 10px;
+}
+
+#form-agregar-client input[type="submit"] {
+  
+  padding: 10px 20px;
+  
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer; 
+}
+
+#form-agregar-client input[type="submit"]:hover {
+  background-color: #555;
+}
+
+
+/* footer */
+.copyright{
+    height: 120px;
+    background-color: #2d6a4f;
+    color: #000;
+    font-size: 13px;
+    text-align: center;
+}
+.copyright p{
+    font-size: 1.5em;
+    padding: 55px 55px 0 55px;
+    font-weight: bolder;
+}

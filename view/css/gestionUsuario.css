@@ -1,0 +1,314 @@
+
+/* Header */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.continer-header{
+    display: flex;
+    justify-content: space-between;
+    background-color: #2d6a4f;
+    padding: 10px;
+}
+.continer-header img{
+    width: 120px;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.continer-header h1{
+    margin-top: 54px;
+    font-size: 2em;
+    color: #f18701;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.continer-header ul{
+    margin-top: 54px;
+    margin-right: 50px;
+}
+.continer-header li{
+    display: inline;
+    border-radius: 5px;
+    background-color: #52b788;
+    margin: 10px;
+    padding: 10px;
+}
+.continer-header a{
+    text-decoration: none;
+}
+
+
+/* main */
+.continer-main{
+    background-color: #f7f7f7;
+    height: auto;
+}
+
+
+/* tabla de ususarios */
+.tablausuario {
+    margin: 30px 20px ;
+    width: 100%;  
+    font-weight: bold; 
+    font-size: 20px;   
+  }
+  
+  .tablausuario thead th {
+    background-color: #f2f2f2;    
+    color: #333;
+    font-weight: bold;
+    padding: 10px;
+    text-align: left;
+    border-bottom: 2px solid #ccc;
+  }
+  
+  .tablausuario tbody td {
+    font-size: 14px;
+    font-weight: Arial;
+    font-family: Arial, sans-serif;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .tablausuario tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .tablausuario tbody tr:hover {
+    background-color: #e6e6e6;
+  }
+  /*titulo*/
+  .titulo {
+    padding: 20px;
+    text-align: center; /* Para centrar el texto */
+    background: linear-gradient(to right, #c3ecea, #0b5c51, #c3ecea); /* Degradado de blanco a gris oscuro a blanco */
+    color: white; /* Color de letra blanco */
+    font-family: Arial, sans-serif; /* Fuente llamativa, por ejemplo Arial */
+  }
+  
+  
+/* primer */
+.primer{
+  display: flex;
+  
+  align-items:stretch;
+}
+/* agregar usuario */
+.agregar{
+  max-width: 30%;
+  background-color: #eeeeee;
+  margin: 20px;
+
+}
+
+.formulario {
+  max-width: 300px;
+  margin: 20px;
+  }
+.formulario h3{
+    color: #111111;
+    text-transform: uppercase;
+    text-align: center;
+}
+  .campo {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input[type="submit"] {
+    background-color: #262927;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #303130;
+  }
+
+
+   form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    
+    input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      font-size: 16px;
+    }
+    
+    input[type="submit"] {
+      background-color: #191a19;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+/* EDITAR */
+.edit{
+  max-width: 30%;
+  background-color: #eeeeee;
+  margin: 20px;
+}
+.editarusuario{
+  max-width: 300px;
+  margin: 20px;
+    }
+.editarusuario h3{
+  color: #111111;
+    text-transform: uppercase;
+    text-align: center;
+}
+.editarusuario label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.editarusuario input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.editarusuario input[type="submit"] {
+  background-color: #131313;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.editarusuario input[type="submit"]:hover {
+  background-color: #303130;
+}
+/*-----------*/
+ #opcion{
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+#opcion select {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  height: 40px;
+  padding: 5px;
+  width: 200px;
+}
+
+ #opcion select:focus {
+  outline: none;
+}
+
+e #opcion select option {
+  background-color: #f9f9f9;
+  color: #555;
+}
+
+.select-style #opcion select option:first-child {
+  color: #888;
+}
+
+.select-style #opcion select option[selected] {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+
+
+/*ELIMINAR*/
+
+.eliminar{
+  max-width: 30%;
+  background-color: #eeeeee;
+  margin: 20px;
+}
+.eliminar form{
+  max-width: 300px;
+  margin: 20px;
+    }
+.eliminar h3{
+  color: #111111;
+    text-transform: uppercase;
+    text-align: center;
+}
+.eliminar label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.eliminar input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.eliminar input[type="submit"] {
+  background-color: #131313;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.eliminar input[type="submit"]:hover {
+  background-color: #303130;
+}
+
+#notification {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* footer */
+
+.copyright{
+    height: 120px;
+    background-color: #2d6a4f;
+    color: #000;
+    font-size: 13px;
+    text-align: center;
+}
+.copyright p{
+    font-size: 1.5em;
+    padding: 55px 55px 0 55px;
+    font-weight: bolder;
+}

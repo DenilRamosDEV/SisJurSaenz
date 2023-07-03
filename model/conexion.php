@@ -1,15 +1,22 @@
 <?php
-$mbd = null;
-$servidor = "localhost";
-$usuario = "root";
-$clave = "";
-$puerto="3308";
-try {
-    $mbd = new PDO("mysql:host=localhost;port=$puerto;dbname=sisjursaenz", $usuario, $clave);
-    echo 'conexion exitosa';
-} catch (PDOException $e) {
-    echo "ERROR AL CONECTAR ";
-    print "¡Error!: " . $e->getMessage() . "<br/>";
-    die();
+class conexionn{
+    public $conexion = null;
+    public function conectar(){
+        $conexion = new mysqli('localhost','root','','sisjursaenz');
+        if($conexion->connect_error){
+            die("conexion fallida: ".$conexion->connect_error);
+            echo "conexion fallida";
+        }
+        //echo"conexion exitosa <br>";
+        return $conexion;
+        
+    }
 }
-return $mbd;
+
+/*
+// Crear una instancia de la clase "conexionn"
+$objConexion = new conexionn();
+$conexion = $objConexion->conectar();
+*/
+
+?>

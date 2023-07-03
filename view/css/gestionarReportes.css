@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,500;1,100;1,200&display=swap');
+
+
+/* Header */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.continer-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #2d6a4f;
+    padding: 10px;
+}
+
+.continer-header img {
+    width: 120px;
+    border-radius: 50%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.continer-header h1 {
+    margin-top: 54px;
+    font-size: 2em;
+    color: #f18701;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.continer-header ul {
+    margin-top: 54px;
+    margin-right: 50px;
+}
+
+.continer-header li {
+    display: inline;
+    background-color: #52b788;
+    margin: 10px;
+    padding: 10px;
+}
+
+.continer-header a {
+    text-decoration: none;
+}
+
+
+/* main */
+main {
+    width: 100%;
+    /* height: 60vh; */
+}
+.container_report{
+    height: 70vh;
+}
+
+.container_table {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 50px auto;
+}
+
+.container_uno {
+    width: 40%;
+}
+
+.container_dos {
+    width: 40%;
+}
+
+
+/* table */
+
+.caso-cabecera{
+    display: flex;
+    justify-content: space-around;
+}
+input {
+    border-color: rgb(161, 161, 3);
+}
+table,
+th,
+td {
+    border: 1px solid;
+}
+
+.rwd-table {
+    margin-top: 10px;
+    width: 90%;
+    border-collapse: collapse;
+    background: #34495E;
+    color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+}
+th,
+td:before {
+    color: #dd5;
+    text-align: center;
+}
+td a{
+    text-decoration: none;
+    color: red;
+}
+
+
+
+
+
+/* Genete Report */
+.container_report{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+.componentes{
+    padding: 10px;
+    width: 30%;
+    border: 3px solid #000;
+    background-color: #34495E;
+    color: #fff;
+}
+.componentes h2 {
+    text-align: center;
+    color: #DDDD55;
+}
+.detalles_2{
+    display: flex;
+    flex-direction: column;
+}
+.detalles{
+    margin: 10px 0;
+}
+.carts{
+    border: 1px solid #DDDD55;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 5px 0;
+    padding: 5px;
+}
+.carts > .actividad{
+    margin: 3px auto;
+    color: #fff;
+}
+.carts > h3{
+    color: #DDDD55;
+}
+
+/* footer */
+.copyright {
+    height: 120px;
+    background-color: #2d6a4f;
+    color: #000;
+    font-size: 13px;
+    text-align: center;
+}
+
+.copyright p {
+    font-size: 1.5em;
+    padding: 55px 55px 0 55px;
+    font-weight: bolder;
+}
+
+.descargar{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.descargar>a{
+    border: 3px solid #DDDD55;
+    padding: 5px;
+    color: #fff;
+    font-size: 2rem;
+    background-color: #34495E;
+    border-radius: 10px;
+    text-decoration: none;
+}
+.descargar>a:hover{
+    color: #DDDD55;
+}

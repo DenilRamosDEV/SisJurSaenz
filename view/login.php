@@ -27,16 +27,21 @@
                 $user_type = $_GET['user_type']; // $user_type tendrá el valor "GERENTE" o "ADMINISTRADOR"
                 echo "<h2 style=' text-transform: uppercase;'>BIENBENIDO &#10140; " . $user_type . " </h2>";
             }
+            include "../model/conexion.php";
+            include "../controller/validar.php"
             ?>
             <div class="login-user">
                 <img src="./img/libra-icon.png" alt="">
                 <div class="login-box">
                     <div class="title-box">
-                        <h2>INICIAR SESION [
+                        <h2>INICIAR SESION 
                             <?php
-                            require __DIR__ . "/../model/conexion.php";
-                            require __DIR__ . "/../controller/validar.php";
-                            ?>]
+                                $objConexion = new conexionn();
+                                $conexion = $objConexion->conectar();
+
+                                $conexion->close();
+
+                            ?>
                         </h2>
                     </div>
                     <div class="form-box">
@@ -52,9 +57,9 @@
                             </div>
                             <div>
                                 <h4><a href="https://www.facebook.com/" target="_blank">Olvidaste tu contraseña?</a></h4>
-                                </di>
+                            </div>
                                 <br>
-                                <input class="btn" type="submit" name="ingreso" value="iniciar session" href>
+                                <input class="btn" type="submit" name="ingreso" value="iniciar session" >
                         </form>
                     </div>
                 </div>
